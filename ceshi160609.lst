@@ -1,0 +1,729 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.83 build 10920 
+                                                                                               Thu Jun 09 09:23:08 2016
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 10920
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 10920"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F73
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           # 89 "C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+    43                           	psect config,class=CONFIG,delta=2 ;#
+    44                           # 89 "C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+    45  2007  3B32               	dw 0x3B32 ;#
+    46                           	FNCALL	_main,_serial_init
+    47                           	FNCALL	_main,_UART_SendByte
+    48                           	FNCALL	_main,_delay2ms
+    49                           	FNROOT	_main
+    50                           	global	_PORTB
+    51                           psect	text161,local,class=CODE,delta=2
+    52                           global __ptext161
+    53  0000                     __ptext161:
+    54  0006                     _PORTB	set	6
+    55                           	global	_RCSTA
+    56  0018                     _RCSTA	set	24
+    57                           	global	_TXREG
+    58  0019                     _TXREG	set	25
+    59                           	global	_GIE
+    60  005F                     _GIE	set	95
+    61                           	global	_INTE
+    62  005C                     _INTE	set	92
+    63                           	global	_PEIE
+    64  005E                     _PEIE	set	94
+    65                           	global	_RB0
+    66  0030                     _RB0	set	48
+    67                           	global	_RB1
+    68  0031                     _RB1	set	49
+    69                           	global	_RB2
+    70  0032                     _RB2	set	50
+    71                           	global	_SPBRG
+    72  0099                     _SPBRG	set	153
+    73                           	global	_TRISA
+    74  0085                     _TRISA	set	133
+    75                           	global	_TRISB
+    76  0086                     _TRISB	set	134
+    77                           	global	_TRISC
+    78  0087                     _TRISC	set	135
+    79                           	global	_TXSTA
+    80  0098                     _TXSTA	set	152
+    81                           	global	_RCIE
+    82  0465                     _RCIE	set	1125
+    83                           	global	_TRMT
+    84  04C1                     _TRMT	set	1217
+    85                           	file	"ceshi160609.as"
+    86                           	line	#
+    87                           psect cinit,class=CODE,delta=2
+    88                           global start_initialization
+    89  076A                     start_initialization:
+    90                           
+    91                           psect cinit,class=CODE,delta=2
+    92                           global end_of_initialization
+    93                           
+    94                           ;End of C runtime variable initialization code
+    95                           
+    96  076A                     end_of_initialization:
+    97  076A  0183               clrf status
+    98  076B  118A  2FC2         ljmp _main	;jump to C main() function
+    99                           psect	cstackCOMMON,class=COMMON,space=1
+   100                           global __pcstackCOMMON
+   101  0000                     __pcstackCOMMON:
+   102                           	global	??_delay2ms
+   103  0000                     ??_delay2ms:	; 0 bytes @ 0x0
+   104                           	global	??_UART_SendByte
+   105  0000                     ??_UART_SendByte:	; 0 bytes @ 0x0
+   106                           	global	??_serial_init
+   107  0000                     ??_serial_init:	; 0 bytes @ 0x0
+   108                           	global	??_main
+   109  0000                     ??_main:	; 0 bytes @ 0x0
+   110                           psect	cstackBANK0,class=BANK0,space=1
+   111                           global __pcstackBANK0
+   112  0020                     __pcstackBANK0:
+   113                           	global	?_delay2ms
+   114  0020                     ?_delay2ms:	; 0 bytes @ 0x0
+   115                           	global	?_UART_SendByte
+   116  0020                     ?_UART_SendByte:	; 0 bytes @ 0x0
+   117                           	global	?_serial_init
+   118  0020                     ?_serial_init:	; 0 bytes @ 0x0
+   119                           	global	?_main
+   120  0020                     ?_main:	; 2 bytes @ 0x0
+   121                           	global	UART_SendByte@dat
+   122  0020                     UART_SendByte@dat:	; 1 bytes @ 0x0
+   123                           	global	delay2ms@x
+   124  0020                     delay2ms@x:	; 2 bytes @ 0x0
+   125  0020                     	ds	2
+   126                           	global	delay2ms@a
+   127  0022                     delay2ms@a:	; 2 bytes @ 0x2
+   128  0022                     	ds	2
+   129                           	global	delay2ms@b
+   130  0024                     delay2ms@b:	; 2 bytes @ 0x4
+   131  0024                     	ds	2
+   132 ;;Data sizes: Strings 0, constant 0, data 0, bss 0, persistent 0 stack 0
+   133 ;;Auto spaces:   Size  Autos    Used
+   134 ;; COMMON           0      0       0
+   135 ;; BANK0           94      6       6
+   136 ;; BANK1           94      0       0
+   137                           
+   138 ;;
+   139 ;; Pointer list with targets:
+   140                           
+   141                           
+   142                           
+   143 ;;
+   144 ;; Critical Paths under _main in COMMON
+   145 ;;
+   146 ;;   None.
+   147 ;;
+   148 ;; Critical Paths under _main in BANK0
+   149 ;;
+   150 ;;   _main->_delay2ms
+   151 ;;
+   152 ;; Critical Paths under _main in BANK1
+   153 ;;
+   154 ;;   None.
+   155                           
+   156 ;;
+   157 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   158 ;;
+   159                           
+   160 ;;
+   161 ;;Call Graph Tables:
+   162 ;;
+   163 ;; ---------------------------------------------------------------------------------
+   164 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   165 ;; ---------------------------------------------------------------------------------
+   166 ;; (0) _main                                                 0     0      0     136
+   167 ;;                        _serial_init
+   168 ;;                      _UART_SendByte
+   169 ;;                           _delay2ms
+   170 ;; ---------------------------------------------------------------------------------
+   171 ;; (1) _serial_init                                          0     0      0       0
+   172 ;; ---------------------------------------------------------------------------------
+   173 ;; (1) _UART_SendByte                                        1     1      0      22
+   174 ;;                                              0 BANK0      1     1      0
+   175 ;; ---------------------------------------------------------------------------------
+   176 ;; (1) _delay2ms                                             6     4      2     114
+   177 ;;                                              0 BANK0      6     4      2
+   178 ;; ---------------------------------------------------------------------------------
+   179 ;; Estimated maximum stack depth 1
+   180 ;; ---------------------------------------------------------------------------------
+   181                           
+   182 ;; Call Graph Graphs:
+   183                           
+   184 ;; _main (ROOT)
+   185 ;;   _serial_init
+   186 ;;   _UART_SendByte
+   187 ;;   _delay2ms
+   188 ;;
+   189                           
+   190 ;; Address spaces:
+   191                           
+   192 ;;Name               Size   Autos  Total    Cost      Usage
+   193 ;;BITCOMMON            0      0       0       0        0.0%
+   194 ;;NULL                 0      0       0       0        0.0%
+   195 ;;CODE                 0      0       0       0        0.0%
+   196 ;;BITSFR0              0      0       0       1        0.0%
+   197 ;;SFR0                 0      0       0       1        0.0%
+   198 ;;COMMON               0      0       0       1        0.0%
+   199 ;;BITSFR1              0      0       0       2        0.0%
+   200 ;;SFR1                 0      0       0       2        0.0%
+   201 ;;STACK                0      0       1       2        0.0%
+   202 ;;ABS                  0      0       0       3        0.0%
+   203 ;;BITBANK0            5E      0       0       4        0.0%
+   204 ;;BITSFR3              0      0       0       4        0.0%
+   205 ;;SFR3                 0      0       0       4        0.0%
+   206 ;;BANK0               5E      6       6       5        6.4%
+   207 ;;BITSFR2              0      0       0       5        0.0%
+   208 ;;SFR2                 0      0       0       5        0.0%
+   209 ;;BITBANK1            5E      0       0       6        0.0%
+   210 ;;BANK1               5E      0       0       7        0.0%
+   211 ;;DATA                 0      0       0       8        0.0%
+   212                           
+   213                           	global	_main
+   214                           psect	maintext,global,class=CODE,delta=2
+   215                           global __pmaintext
+   216  07C2                     __pmaintext:
+   217                           
+   218 ;; *************** function _main *****************
+   219 ;; Defined at:
+   220 ;;		line 116 in file "C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   221 ;; Parameters:    Size  Location     Type
+   222 ;;		None
+   223 ;; Auto vars:     Size  Location     Type
+   224 ;;		None
+   225 ;; Return value:  Size  Location     Type
+   226 ;;                  2  536[BANK0 ] int 
+   227 ;; Registers used:
+   228 ;;		wreg, status,2, status,0, pclath, cstack
+   229 ;; Tracked objects:
+   230 ;;		On entry : 17F/0
+   231 ;;		On exit  : 0/0
+   232 ;;		Unchanged: 0/0
+   233 ;; Data sizes:     COMMON   BANK0   BANK1
+   234 ;;      Params:         0       0       0
+   235 ;;      Locals:         0       0       0
+   236 ;;      Temps:          0       0       0
+   237 ;;      Totals:         0       0       0
+   238 ;;Total ram usage:        0 bytes
+   239 ;; Hardware stack levels required when called:    1
+   240 ;; This function calls:
+   241 ;;		_serial_init
+   242 ;;		_UART_SendByte
+   243 ;;		_delay2ms
+   244 ;; This function is called by:
+   245 ;;		Startup code after reset
+   246 ;; This function uses a non-reentrant model
+   247 ;;
+   248                           psect	maintext
+   249                           	file	"C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   250                           	line	116
+   251                           	global	__size_of_main
+   252  003E                     	__size_of_main	equ	__end_of_main-_main
+   253                           	
+   254  07C2                     _main:	
+   255                           	opt	stack 7
+   256                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   257                           	line	117
+   258                           	
+   259  07C2                     l1753:	
+   260                           ;ceshi.c: 117: TRISA = 0x2f;
+   261  07C2  302F               	movlw	(02Fh)
+   262  07C3  1683               	bsf	status, 5	;RP0=1, select bank1
+   263  07C4  1303               	bcf	status, 6	;RP1=0, select bank1
+   264  07C5  0085               	movwf	(133)^080h	;volatile
+   265                           	line	118
+   266                           ;ceshi.c: 118: TRISB = 0x07;
+   267  07C6  3007               	movlw	(07h)
+   268  07C7  0086               	movwf	(134)^080h	;volatile
+   269                           	line	119
+   270                           ;ceshi.c: 119: TRISC = 0x80;
+   271  07C8  3080               	movlw	(080h)
+   272  07C9  0087               	movwf	(135)^080h	;volatile
+   273                           	line	120
+   274                           	
+   275  07CA                     l1755:	
+   276                           ;ceshi.c: 120: PORTB=0x00;
+   277  07CA  1283               	bcf	status, 5	;RP0=0, select bank0
+   278  07CB  1303               	bcf	status, 6	;RP1=0, select bank0
+   279  07CC  0186               	clrf	(6)	;volatile
+   280                           	line	123
+   281                           	
+   282  07CD                     l1757:	
+   283                           ;ceshi.c: 123: INTE=0;
+   284  07CD  120B               	bcf	(92/8),(92)&7
+   285                           	line	125
+   286                           	
+   287  07CE                     l1759:	
+   288                           ;ceshi.c: 125: serial_init();
+   289  07CE  118A  277B  118A   	fcall	_serial_init
+   290  07D1  2FD2               	goto	l1761
+   291                           	line	130
+   292                           ;ceshi.c: 130: while(1)
+   293                           	
+   294  07D2                     l537:	
+   295                           	line	134
+   296                           	
+   297  07D2                     l1761:	
+   298                           ;ceshi.c: 131: {
+   299                           ;ceshi.c: 134: UART_SendByte(RB0);
+   300  07D2  3000               	movlw	0
+   301  07D3  1283               	bcf	status, 5	;RP0=0, select bank0
+   302  07D4  1303               	bcf	status, 6	;RP1=0, select bank0
+   303  07D5  1806               	btfsc	(48/8),(48)&7
+   304  07D6  3001               	movlw	1
+   305  07D7  118A  276D  118A   	fcall	_UART_SendByte
+   306                           	line	136
+   307                           	
+   308  07DA                     l1763:	
+   309                           ;ceshi.c: 136: UART_SendByte(RB1);
+   310  07DA  3000               	movlw	0
+   311  07DB  1283               	bcf	status, 5	;RP0=0, select bank0
+   312  07DC  1303               	bcf	status, 6	;RP1=0, select bank0
+   313  07DD  1886               	btfsc	(49/8),(49)&7
+   314  07DE  3001               	movlw	1
+   315  07DF  118A  276D  118A   	fcall	_UART_SendByte
+   316                           	line	138
+   317                           	
+   318  07E2                     l1765:	
+   319                           ;ceshi.c: 138: UART_SendByte(RB2);
+   320  07E2  3000               	movlw	0
+   321  07E3  1283               	bcf	status, 5	;RP0=0, select bank0
+   322  07E4  1303               	bcf	status, 6	;RP1=0, select bank0
+   323  07E5  1906               	btfsc	(50/8),(50)&7
+   324  07E6  3001               	movlw	1
+   325  07E7  118A  276D  118A   	fcall	_UART_SendByte
+   326                           	line	140
+   327                           	
+   328  07EA                     l1767:	
+   329                           ;ceshi.c: 140: delay2ms(250);
+   330  07EA  30FA               	movlw	low(0FAh)
+   331  07EB  1283               	bcf	status, 5	;RP0=0, select bank0
+   332  07EC  1303               	bcf	status, 6	;RP1=0, select bank0
+   333  07ED  00A0               	movwf	(?_delay2ms)
+   334  07EE  3000               	movlw	high(0FAh)
+   335  07EF  00A1               	movwf	((?_delay2ms))+1
+   336  07F0  118A  278B  118A   	fcall	_delay2ms
+   337                           	line	142
+   338                           	
+   339  07F3                     l1769:	
+   340                           ;ceshi.c: 142: delay2ms(250);
+   341  07F3  30FA               	movlw	low(0FAh)
+   342  07F4  1283               	bcf	status, 5	;RP0=0, select bank0
+   343  07F5  1303               	bcf	status, 6	;RP1=0, select bank0
+   344  07F6  00A0               	movwf	(?_delay2ms)
+   345  07F7  3000               	movlw	high(0FAh)
+   346  07F8  00A1               	movwf	((?_delay2ms))+1
+   347  07F9  118A  278B  118A   	fcall	_delay2ms
+   348  07FC  2FD2               	goto	l1761
+   349                           	line	146
+   350                           	
+   351  07FD                     l538:	
+   352                           	line	130
+   353  07FD  2FD2               	goto	l1761
+   354                           	
+   355  07FE                     l539:	
+   356                           	line	147
+   357                           	
+   358  07FE                     l540:	
+   359                           	global	start
+   360  07FE  118A  2800         	ljmp	start
+   361                           	opt stack 0
+   362                           GLOBAL	__end_of_main
+   363  0800                     	__end_of_main:
+   364 ;; =============== function _main ends ============
+   365                           
+   366                           	signat	_main,90
+   367                           	global	_serial_init
+   368                           psect	text162,local,class=CODE,delta=2
+   369                           global __ptext162
+   370  077B                     __ptext162:
+   371                           
+   372 ;; *************** function _serial_init *****************
+   373 ;; Defined at:
+   374 ;;		line 102 in file "C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   375 ;; Parameters:    Size  Location     Type
+   376 ;;		None
+   377 ;; Auto vars:     Size  Location     Type
+   378 ;;		None
+   379 ;; Return value:  Size  Location     Type
+   380 ;;		None               void
+   381 ;; Registers used:
+   382 ;;		wreg
+   383 ;; Tracked objects:
+   384 ;;		On entry : 0/0
+   385 ;;		On exit  : 0/0
+   386 ;;		Unchanged: 0/0
+   387 ;; Data sizes:     COMMON   BANK0   BANK1
+   388 ;;      Params:         0       0       0
+   389 ;;      Locals:         0       0       0
+   390 ;;      Temps:          0       0       0
+   391 ;;      Totals:         0       0       0
+   392 ;;Total ram usage:        0 bytes
+   393 ;; Hardware stack levels used:    1
+   394 ;; This function calls:
+   395 ;;		Nothing
+   396 ;; This function is called by:
+   397 ;;		_main
+   398 ;; This function uses a non-reentrant model
+   399 ;;
+   400                           psect	text162
+   401                           	file	"C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   402                           	line	102
+   403                           	global	__size_of_serial_init
+   404  0010                     	__size_of_serial_init	equ	__end_of_serial_init-_serial_init
+   405                           	
+   406  077B                     _serial_init:	
+   407                           	opt	stack 7
+   408                           ; Regs used in _serial_init: [wreg]
+   409                           	line	104
+   410                           	
+   411  077B                     l1745:	
+   412                           ;ceshi.c: 104: TXSTA=0x24;
+   413  077B  3024               	movlw	(024h)
+   414  077C  1683               	bsf	status, 5	;RP0=1, select bank1
+   415  077D  1303               	bcf	status, 6	;RP1=0, select bank1
+   416  077E  0098               	movwf	(152)^080h	;volatile
+   417                           	line	105
+   418                           ;ceshi.c: 105: RCSTA=0x80;
+   419  077F  3080               	movlw	(080h)
+   420  0780  1283               	bcf	status, 5	;RP0=0, select bank0
+   421  0781  1303               	bcf	status, 6	;RP1=0, select bank0
+   422  0782  0098               	movwf	(24)	;volatile
+   423                           	line	107
+   424                           ;ceshi.c: 107: SPBRG=0x19;
+   425  0783  3019               	movlw	(019h)
+   426  0784  1683               	bsf	status, 5	;RP0=1, select bank1
+   427  0785  1303               	bcf	status, 6	;RP1=0, select bank1
+   428  0786  0099               	movwf	(153)^080h	;volatile
+   429                           	line	108
+   430                           	
+   431  0787                     l1747:	
+   432                           ;ceshi.c: 108: GIE=1;
+   433  0787  178B               	bsf	(95/8),(95)&7
+   434                           	line	109
+   435                           	
+   436  0788                     l1749:	
+   437                           ;ceshi.c: 109: PEIE=1;
+   438  0788  170B               	bsf	(94/8),(94)&7
+   439                           	line	110
+   440                           	
+   441  0789                     l1751:	
+   442                           ;ceshi.c: 110: RCIE=0;
+   443  0789  128C               	bcf	(1125/8)^080h,(1125)&7
+   444                           	line	111
+   445                           	
+   446  078A                     l534:	
+   447  078A  0008               	return
+   448                           	opt stack 0
+   449                           GLOBAL	__end_of_serial_init
+   450  078B                     	__end_of_serial_init:
+   451 ;; =============== function _serial_init ends ============
+   452                           
+   453                           	signat	_serial_init,88
+   454                           	global	_UART_SendByte
+   455                           psect	text163,local,class=CODE,delta=2
+   456                           global __ptext163
+   457  076D                     __ptext163:
+   458                           
+   459 ;; *************** function _UART_SendByte *****************
+   460 ;; Defined at:
+   461 ;;		line 97 in file "C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   462 ;; Parameters:    Size  Location     Type
+   463 ;;  dat             1    wreg     unsigned char 
+   464 ;; Auto vars:     Size  Location     Type
+   465 ;;  dat             1    0[BANK0 ] unsigned char 
+   466 ;; Return value:  Size  Location     Type
+   467 ;;		None               void
+   468 ;; Registers used:
+   469 ;;		wreg
+   470 ;; Tracked objects:
+   471 ;;		On entry : 0/0
+   472 ;;		On exit  : 0/0
+   473 ;;		Unchanged: 0/0
+   474 ;; Data sizes:     COMMON   BANK0   BANK1
+   475 ;;      Params:         0       0       0
+   476 ;;      Locals:         0       1       0
+   477 ;;      Temps:          0       0       0
+   478 ;;      Totals:         0       1       0
+   479 ;;Total ram usage:        1 bytes
+   480 ;; Hardware stack levels used:    1
+   481 ;; This function calls:
+   482 ;;		Nothing
+   483 ;; This function is called by:
+   484 ;;		_main
+   485 ;; This function uses a non-reentrant model
+   486 ;;
+   487                           psect	text163
+   488                           	file	"C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   489                           	line	97
+   490                           	global	__size_of_UART_SendByte
+   491  000E                     	__size_of_UART_SendByte	equ	__end_of_UART_SendByte-_UART_SendByte
+   492                           	
+   493  076D                     _UART_SendByte:	
+   494                           	opt	stack 7
+   495                           ; Regs used in _UART_SendByte: [wreg]
+   496                           ;UART_SendByte@dat stored from wreg
+   497  076D  1283               	bcf	status, 5	;RP0=0, select bank0
+   498  076E  1303               	bcf	status, 6	;RP1=0, select bank0
+   499  076F  00A0               	movwf	(UART_SendByte@dat)
+   500                           	line	98
+   501                           	
+   502  0770                     l1743:	
+   503                           ;ceshi.c: 98: TXREG=dat;
+   504  0770  0820               	movf	(UART_SendByte@dat),w
+   505  0771  0099               	movwf	(25)	;volatile
+   506                           	line	99
+   507                           ;ceshi.c: 99: while(TRMT==0);
+   508  0772  2F73               	goto	l528
+   509                           	
+   510  0773                     l529:	
+   511                           	
+   512  0773                     l528:	
+   513  0773  1683               	bsf	status, 5	;RP0=1, select bank1
+   514  0774  1303               	bcf	status, 6	;RP1=0, select bank1
+   515  0775  1C98               	btfss	(1217/8)^080h,(1217)&7
+   516  0776  2F78               	goto	u2231
+   517  0777  2F79               	goto	u2230
+   518  0778                     u2231:
+   519  0778  2F73               	goto	l528
+   520  0779                     u2230:
+   521  0779  2F7A               	goto	l531
+   522                           	
+   523  077A                     l530:	
+   524                           	line	100
+   525                           	
+   526  077A                     l531:	
+   527  077A  0008               	return
+   528                           	opt stack 0
+   529                           GLOBAL	__end_of_UART_SendByte
+   530  077B                     	__end_of_UART_SendByte:
+   531 ;; =============== function _UART_SendByte ends ============
+   532                           
+   533                           	signat	_UART_SendByte,4216
+   534                           	global	_delay2ms
+   535                           psect	text164,local,class=CODE,delta=2
+   536                           global __ptext164
+   537  078B                     __ptext164:
+   538                           
+   539 ;; *************** function _delay2ms *****************
+   540 ;; Defined at:
+   541 ;;		line 91 in file "C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   542 ;; Parameters:    Size  Location     Type
+   543 ;;  x               2    0[BANK0 ] unsigned int 
+   544 ;; Auto vars:     Size  Location     Type
+   545 ;;  b               2    4[BANK0 ] unsigned int 
+   546 ;;  a               2    2[BANK0 ] unsigned int 
+   547 ;; Return value:  Size  Location     Type
+   548 ;;		None               void
+   549 ;; Registers used:
+   550 ;;		wreg, status,2, status,0
+   551 ;; Tracked objects:
+   552 ;;		On entry : 0/0
+   553 ;;		On exit  : 0/0
+   554 ;;		Unchanged: 0/0
+   555 ;; Data sizes:     COMMON   BANK0   BANK1
+   556 ;;      Params:         0       2       0
+   557 ;;      Locals:         0       4       0
+   558 ;;      Temps:          0       0       0
+   559 ;;      Totals:         0       6       0
+   560 ;;Total ram usage:        6 bytes
+   561 ;; Hardware stack levels used:    1
+   562 ;; This function calls:
+   563 ;;		Nothing
+   564 ;; This function is called by:
+   565 ;;		_main
+   566 ;; This function uses a non-reentrant model
+   567 ;;
+   568                           psect	text164
+   569                           	file	"C:\Users\Administrator\Desktop\pic16f73\ceshi.c"
+   570                           	line	91
+   571                           	global	__size_of_delay2ms
+   572  0037                     	__size_of_delay2ms	equ	__end_of_delay2ms-_delay2ms
+   573                           	
+   574  078B                     _delay2ms:	
+   575                           	opt	stack 7
+   576                           ; Regs used in _delay2ms: [wreg+status,2+status,0]
+   577                           	line	93
+   578                           	
+   579  078B                     l1723:	
+   580                           ;ceshi.c: 92: unsigned int a,b;
+   581                           ;ceshi.c: 93: for(a=x; a>0; a--)
+   582  078B  1283               	bcf	status, 5	;RP0=0, select bank0
+   583  078C  1303               	bcf	status, 6	;RP1=0, select bank0
+   584  078D  0821               	movf	(delay2ms@x+1),w
+   585  078E  01A3               	clrf	(delay2ms@a+1)
+   586  078F  07A3               	addwf	(delay2ms@a+1)
+   587  0790  0820               	movf	(delay2ms@x),w
+   588  0791  01A2               	clrf	(delay2ms@a)
+   589  0792  07A2               	addwf	(delay2ms@a)
+   590                           
+   591                           	
+   592  0793                     l1725:	
+   593  0793  0823               	movf	((delay2ms@a+1)),w
+   594  0794  0422               	iorwf	((delay2ms@a)),w
+   595  0795  1D03               	skipz
+   596  0796  2F98               	goto	u2191
+   597  0797  2F99               	goto	u2190
+   598  0798                     u2191:
+   599  0798  2F9B               	goto	l1729
+   600  0799                     u2190:
+   601  0799  2FC1               	goto	l525
+   602                           	
+   603  079A                     l1727:	
+   604  079A  2FC1               	goto	l525
+   605                           	line	94
+   606                           	
+   607  079B                     l521:	
+   608                           	
+   609  079B                     l1729:	
+   610                           ;ceshi.c: 94: for(b=152; b>0; b--);
+   611  079B  3098               	movlw	low(098h)
+   612  079C  00A4               	movwf	(delay2ms@b)
+   613  079D  3000               	movlw	high(098h)
+   614  079E  00A5               	movwf	((delay2ms@b))+1
+   615                           	
+   616  079F                     l1731:	
+   617  079F  0825               	movf	((delay2ms@b+1)),w
+   618  07A0  0424               	iorwf	((delay2ms@b)),w
+   619  07A1  1D03               	skipz
+   620  07A2  2FA4               	goto	u2201
+   621  07A3  2FA5               	goto	u2200
+   622  07A4                     u2201:
+   623  07A4  2FA7               	goto	l1735
+   624  07A5                     u2200:
+   625  07A5  2FB4               	goto	l1739
+   626                           	
+   627  07A6                     l1733:	
+   628  07A6  2FB4               	goto	l1739
+   629                           	
+   630  07A7                     l523:	
+   631                           	
+   632  07A7                     l1735:	
+   633  07A7  3001               	movlw	low(01h)
+   634  07A8  02A4               	subwf	(delay2ms@b),f
+   635  07A9  3000               	movlw	high(01h)
+   636  07AA  1C03               	skipc
+   637  07AB  03A5               	decf	(delay2ms@b+1),f
+   638  07AC  02A5               	subwf	(delay2ms@b+1),f
+   639                           	
+   640  07AD                     l1737:	
+   641  07AD  0825               	movf	((delay2ms@b+1)),w
+   642  07AE  0424               	iorwf	((delay2ms@b)),w
+   643  07AF  1D03               	skipz
+   644  07B0  2FB2               	goto	u2211
+   645  07B1  2FB3               	goto	u2210
+   646  07B2                     u2211:
+   647  07B2  2FA7               	goto	l1735
+   648  07B3                     u2210:
+   649  07B3  2FB4               	goto	l1739
+   650                           	
+   651  07B4                     l524:	
+   652                           	line	93
+   653                           	
+   654  07B4                     l1739:	
+   655  07B4  3001               	movlw	low(01h)
+   656  07B5  02A2               	subwf	(delay2ms@a),f
+   657  07B6  3000               	movlw	high(01h)
+   658  07B7  1C03               	skipc
+   659  07B8  03A3               	decf	(delay2ms@a+1),f
+   660  07B9  02A3               	subwf	(delay2ms@a+1),f
+   661                           	
+   662  07BA                     l1741:	
+   663  07BA  0823               	movf	((delay2ms@a+1)),w
+   664  07BB  0422               	iorwf	((delay2ms@a)),w
+   665  07BC  1D03               	skipz
+   666  07BD  2FBF               	goto	u2221
+   667  07BE  2FC0               	goto	u2220
+   668  07BF                     u2221:
+   669  07BF  2F9B               	goto	l1729
+   670  07C0                     u2220:
+   671  07C0  2FC1               	goto	l525
+   672                           	
+   673  07C1                     l522:	
+   674                           	line	95
+   675                           	
+   676  07C1                     l525:	
+   677  07C1  0008               	return
+   678                           	opt stack 0
+   679                           GLOBAL	__end_of_delay2ms
+   680  07C2                     	__end_of_delay2ms:
+   681 ;; =============== function _delay2ms ends ============
+   682                           
+   683                           	signat	_delay2ms,4216
+   684                           psect	text165,local,class=CODE,delta=2
+   685                           global __ptext165
+   686  0000                     __ptext165:
+   687                           	global	btemp
+   688  007E                     	btemp set 07Eh
+   689                           
+   690                           	DABS	1,126,2	;btemp
+   691                           	global	wtemp0
+   692  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.83 build 10920 
+Symbol Table                                                                                   Thu Jun 09 09:23:08 2016
+
+                   l521 079B                     l522 07C1                     l530 077A                     l523 07A7  
+                   l531 077A                     l524 07B4                     l540 07FE                     l525 07C1  
+                   l534 078A                     l528 0773                     l529 0773                     l537 07D2  
+                   l538 07FD                     l539 07FE                     _GIE 005F                     _RB0 0030  
+                   _RB1 0031                     _RB2 0032                    l1731 079F                    l1723 078B  
+                  l1741 07BA                    l1733 07A6                    l1725 0793                    l1735 07A7  
+                  l1727 079A                    l1743 0770                    l1751 0789                    l1737 07AD  
+                  l1729 079B                    l1745 077B                    l1761 07D2                    l1753 07C2  
+                  l1739 07B4                    l1747 0787                    l1763 07DA                    l1755 07CA  
+                  l1749 0788                    l1765 07E2                    l1757 07CD                    l1767 07EA  
+                  l1759 07CE                    l1769 07F3                    u2200 07A5                    u2201 07A4  
+                  u2210 07B3                    u2211 07B2                    u2220 07C0                    u2221 07BF  
+                  u2230 0779                    u2231 0778                    u2190 0799                    u2191 0798  
+                  _PEIE 005E                    _INTE 005C                    _RCIE 0465                    _TRMT 04C1  
+                  _main 07C2                    btemp 007E                    start 0000                   ?_main 0020  
+                 _RCSTA 0018                   _SPBRG 0099                   _PORTB 0006                   _TRISA 0085  
+                 _TRISB 0086                   _TRISC 0087                   _TXREG 0019                   _TXSTA 0098  
+                 status 0003                   wtemp0 007E            __end_of_main 0800                  ??_main 0000  
+      __end_of_delay2ms 07C2            ?_serial_init 0020   __end_of_UART_SendByte 077B          __pcstackCOMMON 0000  
+            __pmaintext 07C2               ?_delay2ms 0020    __size_of_serial_init 0010              ??_delay2ms 0000  
+  end_of_initialization 076A     start_initialization 076A        UART_SendByte@dat 0020  __size_of_UART_SendByte 000E  
+         __pcstackBANK0 0020       __size_of_delay2ms 0037               __ptext161 0000               __ptext162 077B  
+             __ptext163 076D               __ptext164 078B               __ptext165 0000               delay2ms@a 0022  
+             delay2ms@b 0024               delay2ms@x 0020           _UART_SendByte 076D           ??_serial_init 0000  
+        ?_UART_SendByte 0020     __end_of_serial_init 078B                _delay2ms 078B           __size_of_main 003E  
+       ??_UART_SendByte 0000             _serial_init 077B  

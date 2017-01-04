@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\PICHPV02.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>4096</length>
+      <used>3607</used>
+      <free>489</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>192</length>
+      <used>104</used>
+      <free>88</free>
+    </memory>
+  </executable>
+</project>

@@ -1,0 +1,167 @@
+_RB0 30 0 ABS
+_RB1 31 0 ABS
+_RB2 32 0 ABS
+__S0 2008 0 ABS
+__S1 26 0 ABS
+_GIE 5F 0 ABS
+__Hintentry 0 0 CODE
+__Lintentry 0 0 CODE
+_RCIE 465 0 ABS
+_PEIE 5E 0 ABS
+_INTE 5C 0 ABS
+_TRMT 4C1 0 ABS
+?_serial_init 20 0 BANK0
+_main 7C2 0 CODE
+btemp 7E 0 ABS
+_exit 0 0 CODE
+start 0 0 CODE
+_TRISA 85 0 ABS
+_RCSTA 18 0 ABS
+_TRISB 86 0 ABS
+_TRISC 87 0 ABS
+_TXREG 19 0 ABS
+reset_vec 0 0 CODE
+_PORTB 6 0 ABS
+_SPBRG 99 0 ABS
+_TXSTA 98 0 ABS
+wtemp0 7E 0 ABS
+__Hconfig 2008 0 CONFIG
+__Lconfig 2007 0 CONFIG
+??_serial_init 0 0 COMMON
+_delay2ms 78B 0 CODE
+_UART_SendByte 76D 0 CODE
+__Hram 0 0 ABS
+__Lram 0 0 ABS
+?_main 20 0 BANK0
+__Hfunctab 0 0 CODE
+__Lfunctab 0 0 CODE
+__Hcommon 0 0 ABS
+__Lcommon 0 0 ABS
+__Heeprom_data 0 0 EEDATA
+__Leeprom_data 0 0 EEDATA
+delay2ms@x 20 0 BANK0
+__Habs1 0 0 ABS
+__Labs1 0 0 ABS
+__Hsfr0 0 0 ABS
+__Lsfr0 0 0 ABS
+__Hsfr1 0 0 ABS
+__Lsfr1 0 0 ABS
+__Hsfr2 0 0 ABS
+__Lsfr2 0 0 ABS
+UART_SendByte@dat 20 0 BANK0
+__Hsfr3 0 0 ABS
+__Lsfr3 0 0 ABS
+?_delay2ms 20 0 BANK0
+__ptext161 0 0 CODE
+__ptext162 77B 0 CODE
+__Hcode 0 0 ABS
+__Lcode 0 0 ABS
+?_UART_SendByte 20 0 BANK0
+__ptext163 76D 0 CODE
+??_main 0 0 COMMON
+__HcstackBANK0 0 0 ABS
+__LcstackBANK0 0 0 ABS
+__ptext164 78B 0 CODE
+__pcstackBANK0 20 0 BANK0
+__Hinit 0 0 CODE
+__Linit 0 0 CODE
+__end_of_main 800 0 CODE
+__ptext165 0 0 CODE
+__end_of_delay2ms 7C2 0 CODE
+__Htext 0 0 ABS
+__Ltext 0 0 ABS
+end_of_initialization 76A 0 CODE
+__size_of_UART_SendByte 0 0 ABS
+__Hstrings 0 0 ABS
+__Lstrings 0 0 ABS
+__Hbank0 0 0 ABS
+__Lbank0 0 0 ABS
+__Hbank1 0 0 ABS
+__Lbank1 0 0 ABS
+__Hbank2 0 0 BANK2
+__Lbank2 0 0 BANK2
+__Hbank3 0 0 BANK3
+__Lbank3 0 0 BANK3
+__Hpowerup 0 0 CODE
+__Lpowerup 0 0 CODE
+__Hclrtext 0 0 ABS
+__Lclrtext 0 0 ABS
+??_delay2ms 0 0 COMMON
+_serial_init 77B 0 CODE
+??_UART_SendByte 0 0 COMMON
+__Hidloc 0 0 IDLOC
+__Lidloc 0 0 IDLOC
+__size_of_serial_init 0 0 ABS
+__Hcinit 0 0 ABS
+__Lcinit 0 0 ABS
+__size_of_main 0 0 ABS
+__size_of_delay2ms 0 0 ABS
+__end_of_serial_init 78B 0 CODE
+__end_of_UART_SendByte 77B 0 CODE
+__Hend_init 2 0 CODE
+__Lend_init 0 0 CODE
+__Hreset_vec 0 0 CODE
+__Lreset_vec 0 0 CODE
+intlevel0 0 0 CODE
+intlevel1 0 0 CODE
+intlevel2 0 0 CODE
+intlevel3 0 0 CODE
+intlevel4 0 0 CODE
+intlevel5 0 0 CODE
+__HcstackCOMMON 0 0 ABS
+__LcstackCOMMON 0 0 ABS
+__pcstackCOMMON 0 0 COMMON
+start_initialization 76A 0 CODE
+__Hmaintext 0 0 ABS
+__Lmaintext 0 0 ABS
+__pmaintext 7C2 0 CODE
+delay2ms@a 22 0 BANK0
+delay2ms@b 24 0 BANK0
+%segments
+reset_vec 0 3 CODE 0
+config 400E 400F CONFIG 400E
+cstackBANK0 20 25 BANK0 20
+maintext F84 FFF CODE F84
+text164 F16 F83 CODE F16
+text162 EF6 F15 CODE EF6
+text163 EDA EF5 CODE EDA
+cinit ED4 ED9 CODE ED4
+%locals
+startup.obj
+startup.as
+64 0 0 CODE
+ceshi160609.obj
+C:\Users\Administrator\Desktop\pic16f73\ceshi.c
+89 2007 0 CONFIG
+ceshi160609.as
+97 76A 0 CODE
+98 76B 0 CODE
+C:\Users\Administrator\Desktop\pic16f73\ceshi.c
+117 7C2 0 CODE
+118 7C6 0 CODE
+119 7C8 0 CODE
+120 7CA 0 CODE
+123 7CD 0 CODE
+125 7CE 0 CODE
+134 7D2 0 CODE
+136 7DA 0 CODE
+138 7E2 0 CODE
+140 7EA 0 CODE
+142 7F3 0 CODE
+130 7FD 0 CODE
+147 7FE 0 CODE
+104 77B 0 CODE
+105 77F 0 CODE
+107 783 0 CODE
+108 787 0 CODE
+109 788 0 CODE
+110 789 0 CODE
+111 78A 0 CODE
+97 76D 0 CODE
+98 770 0 CODE
+99 772 0 CODE
+100 77A 0 CODE
+93 78B 0 CODE
+94 79B 0 CODE
+93 7B4 0 CODE
+95 7C1 0 CODE

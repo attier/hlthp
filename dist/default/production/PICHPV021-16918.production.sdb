@@ -1,0 +1,356 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F73 ]
+[d frameptr 6 ]
+"31 C:\Users\huang\Desktop\PIC\PICHPV021-16918\HPsystem.c
+[e E832 . `uc
+NoWork 0
+WorkHW 1
+WorkH 2
+WorkC 3
+]
+"87
+[e E914 . `uc
+UP 0
+E 1
+W 2
+CS 3
+CP 4
+XIX 5
+XCX 6
+ZZ 7
+]
+"19 C:\Users\huang\Desktop\PIC\PICHPV021-16918\DriveRelay.c
+[v _DriveRelay DriveRelay `(v  1 e 1 0 ]
+"39 C:\Users\huang\Desktop\PIC\PICHPV021-16918\DriveTime.c
+[v _CountClk CountClk `(v  1 e 1 0 ]
+"53
+[v _CountMin CountMin `(v  1 e 1 0 ]
+"64
+[v _DriveTime DriveTime `(v  1 e 1 0 ]
+"16 C:\Users\huang\Desktop\PIC\PICHPV021-16918\eev.c
+[v _eevdriver eevdriver `(v  1 e 1 0 ]
+"34
+[v _eevinit eevinit `(v  1 e 1 0 ]
+"92
+[v _DriveEEV DriveEEV `(v  1 e 1 0 ]
+"4 G:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"62 G:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 G:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"14 C:\Users\huang\Desktop\PIC\PICHPV021-16918\HPsystem.c
+[v _HPstart HPstart `(v  1 e 1 0 ]
+"63
+[v _HPOuUnit HPOuUnit `(v  1 e 1 0 ]
+"127
+[v _HPShut HPShut `(v  1 e 1 0 ]
+"169
+[v _HPSystem HPSystem `(v  1 e 1 0 ]
+"63 C:\Users\huang\Desktop\PIC\PICHPV021-16918\main.c
+[v _UART_SendByte UART_SendByte `(v  1 e 1 0 ]
+"68
+[v _ADC ADC `(uc  1 e 1 0 ]
+"84
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+"96
+[v _ISR ISR `II(v  1 e 1 0 ]
+"120
+[v _delay2ms delay2ms `(v  1 e 1 0 ]
+"127
+[v _serial_init serial_init `(v  1 e 1 0 ]
+"140
+[v _main main `(i  1 e 2 0 ]
+"200
+[v _TEMPADC TEMPADC `(v  1 e 1 0 ]
+"4 C:\Users\huang\Desktop\PIC\PICHPV021-16918\DriveTime.c
+[v _InterTimes InterTimes `uc  1 e 1 0 ]
+"5
+[v _Clock Clock `uc  1 e 1 0 ]
+"6
+[v _Minutes Minutes `uc  1 e 1 0 ]
+[s S275 . 1 `uc 1 LBIT 1 0 :4:0 
+`uc 1 HBIT 1 0 :4:4 
+]
+"14 C:\Users\huang\Desktop\PIC\PICHPV021-16918\eev.c
+[u S278 . 1 `S275 1 . 1 0 ]
+[v _PORTCBIT PORTCBIT `VES278  1 e 1 @7 ]
+"5 C:\Users\huang\Desktop\PIC\PICHPV021-16918\eev.h
+[v _STEP STEP `DCC[8]ui  1 e 16 0 ]
+"7
+[v _stepcount stepcount `i  1 e 2 0 ]
+"8
+[v _EEVSTEP EEVSTEP `i  1 e 2 0 ]
+"55 G:\Program Files (x86)\Microchip\xc8\v1.37\include\pic16f73.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"209
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"810
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"899
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"986
+[v _ADRES ADRES `VEuc  1 e 1 @30 ]
+"1005
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S349 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1036
+[s S355 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S363 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S366 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S369 . 1 `S349 1 . 1 0 `S355 1 . 1 0 `S363 1 . 1 0 `S366 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES369  1 e 1 @31 ]
+"1169
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1218
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1279
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1627
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"1707
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"1713
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"1809
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"1873
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"1875
+[v _GO GO `VEb  1 e 0 @250 ]
+"1889
+[v _INTE INTE `VEb  1 e 0 @92 ]
+"1905
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"1913
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"1927
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"1929
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"1931
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"1935
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"1937
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"1939
+[v _RB6 RB6 `VEb  1 e 0 @54 ]
+"1941
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"1943
+[v _RBIE RBIE `VEb  1 e 0 @91 ]
+"1955
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"1969
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"2013
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"2015
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"2017
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"2035
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"2103
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"2139
+[v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
+"10 C:\Users\huang\Desktop\PIC\PICHPV021-16918\HPsystem.c
+[v _t1 t1 `i  1 e 2 0 ]
+"11
+[v _t2 t2 `i  1 e 2 0 ]
+"12
+[v _ff ff `i  1 e 2 0 ]
+"13
+[v _ee ee `i  1 e 2 0 ]
+[s S67 . 2 `uc 1 Interrupt 1 0 :1:0 
+`uc 1 Debug 1 0 :1:1 
+`uc 1 Working 1 0 :3:2 
+`uc 1 SwOnOff 1 0 :1:5 
+`uc 1 AutoMode 1 0 :1:6 
+`uc 1 EVW 1 0 :1:7 
+`uc 1 EVH 1 1 :1:0 
+`uc 1 EVC 1 1 :1:1 
+`uc 1 Defog 1 1 :1:2 
+`uc 1 Defoging 1 1 :1:3 
+`uc 1 DefogStop 1 1 :1:4 
+]
+"26 C:\Users\huang\Desktop\PIC\PICHPV021-16918\main.c
+[u S79 JudgeFlag 2 `S67 1 . 2 0 `ui 1 All 2 0 ]
+[v _Judge Judge `S79  1 e 2 0 ]
+[s S19 . 1 `uc 1 Com 1 0 :1:0 
+`uc 1 Pump 1 0 :1:1 
+`uc 1 Fan 1 0 :1:2 
+`uc 1 Fway 1 0 :1:3 
+]
+"27
+[u S24 RelayFlag1 1 `S19 1 . 1 0 `uc 1 All 1 0 ]
+[v _RelayS RelayS `S24  1 e 1 0 ]
+[s S46 . 9 `uc 1 PumpRun 1 0 `ui 1 PumpStop 2 1 `uc 1 ComRun 1 3 `uc 1 ComStop 1 4 `uc 1 DefogStop 1 5 `ui 1 Defoging 2 6 `uc 1 DefogScan 1 8 :6:0 
+]
+"28
+[u S54 TimeCount 9 `S46 1 . 9 0 `d 1 All 3 0 ]
+[v _TM TM `S54  1 e 9 0 ]
+[s S118 . 1 `uc 1 TW 1 0 :1:0 
+`uc 1 TH 1 0 :1:1 
+`uc 1 TC 1 0 :1:2 
+`uc 1 TI 1 0 :1:3 
+`uc 1 TUP 1 0 :1:4 
+`uc 1 TCP 1 0 :1:5 
+`uc 1 P6 1 0 :1:6 
+]
+"29
+[u S126 ErrFlag 2 `S118 1 . 1 0 `ui 1 All 2 0 ]
+[v _SysErr SysErr `S126  1 e 2 0 ]
+"30
+[v _adcc adcc `i  1 e 2 0 ]
+"31
+[v _T T `[8]i  1 e 16 0 ]
+"32
+[v _temp1 temp1 `uc  1 e 1 0 ]
+"41
+[v _fkTempTab fkTempTab `DCC[256]s  1 s 512 fkTempTab ]
+"52
+[v _tkTempTab tkTempTab `DCC[249]s  1 s 498 tkTempTab ]
+"140
+[v _main main `(i  1 e 2 0 ]
+{
+"197
+} 0
+"84
+[v _timer0_init timer0_init `(v  1 e 1 0 ]
+{
+"95
+} 0
+"127
+[v _serial_init serial_init `(v  1 e 1 0 ]
+{
+"136
+} 0
+"34 C:\Users\huang\Desktop\PIC\PICHPV021-16918\eev.c
+[v _eevinit eevinit `(v  1 e 1 0 ]
+{
+"35
+[v eevinit@i i `i  1 a 2 17 ]
+"78
+} 0
+"200 C:\Users\huang\Desktop\PIC\PICHPV021-16918\main.c
+[v _TEMPADC TEMPADC `(v  1 e 1 0 ]
+{
+"201
+[v TEMPADC@uwAdcSample uwAdcSample `uc  1 a 1 19 ]
+"244
+} 0
+"68
+[v _ADC ADC `(uc  1 e 1 0 ]
+{
+[v ADC@x x `ui  1 p 2 11 ]
+"82
+} 0
+"169 C:\Users\huang\Desktop\PIC\PICHPV021-16918\HPsystem.c
+[v _HPSystem HPSystem `(v  1 e 1 0 ]
+{
+"177
+} 0
+"14
+[v _HPstart HPstart `(v  1 e 1 0 ]
+{
+"56
+} 0
+"4 G:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 5 ]
+"9
+} 0
+"63 C:\Users\huang\Desktop\PIC\PICHPV021-16918\HPsystem.c
+[v _HPOuUnit HPOuUnit `(v  1 e 1 0 ]
+{
+"126
+} 0
+"127
+[v _HPShut HPShut `(v  1 e 1 0 ]
+{
+"166
+} 0
+"64 C:\Users\huang\Desktop\PIC\PICHPV021-16918\DriveTime.c
+[v _DriveTime DriveTime `(v  1 e 1 0 ]
+{
+"100
+[v DriveTime@i i `i  1 a 2 17 ]
+"133
+} 0
+"63 C:\Users\huang\Desktop\PIC\PICHPV021-16918\main.c
+[v _UART_SendByte UART_SendByte `(v  1 e 1 0 ]
+{
+[v UART_SendByte@dat dat `uc  1 a 1 wreg ]
+[v UART_SendByte@dat dat `uc  1 a 1 wreg ]
+"65
+[v UART_SendByte@dat dat `uc  1 a 1 5 ]
+"67
+} 0
+"92 C:\Users\huang\Desktop\PIC\PICHPV021-16918\eev.c
+[v _DriveEEV DriveEEV `(v  1 e 1 0 ]
+{
+"95
+[v DriveEEV@x x `i  1 a 2 14 ]
+"110
+} 0
+"16
+[v _eevdriver eevdriver `(v  1 e 1 0 ]
+{
+"17
+[v eevdriver@stepx stepx `ui  1 a 2 10 ]
+"16
+[v eevdriver@x x `i  1 p 2 5 ]
+"31
+} 0
+"120 C:\Users\huang\Desktop\PIC\PICHPV021-16918\main.c
+[v _delay2ms delay2ms `(v  1 e 1 0 ]
+{
+"122
+[v delay2ms@b b `ui  1 a 2 9 ]
+[v delay2ms@a a `ui  1 a 2 7 ]
+"120
+[v delay2ms@x x `ui  1 p 2 5 ]
+"125
+} 0
+"53 C:\Users\huang\Desktop\PIC\PICHPV021-16918\DriveTime.c
+[v _CountMin CountMin `(v  1 e 1 0 ]
+{
+"63
+} 0
+"39
+[v _CountClk CountClk `(v  1 e 1 0 ]
+{
+"52
+} 0
+"19 C:\Users\huang\Desktop\PIC\PICHPV021-16918\DriveRelay.c
+[v _DriveRelay DriveRelay `(v  1 e 1 0 ]
+{
+"30
+} 0
+"96 C:\Users\huang\Desktop\PIC\PICHPV021-16918\main.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"114
+} 0
